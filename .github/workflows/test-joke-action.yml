@@ -1,0 +1,22 @@
+name: Test Joke Action
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Run Joke Action
+        id: joke
+        uses: ./.github/actions/joke-action
+        with:
+          who-to-greet: 'GitHub Actions'
+          
+      - name: Get the joke
+        run: echo "The joke was: ${{ steps.joke.outputs.joke }}" 

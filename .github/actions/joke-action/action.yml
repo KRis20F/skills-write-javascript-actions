@@ -1,0 +1,13 @@
+name: 'Joke Action'
+description: 'A simple action that fetches a random joke'
+inputs:
+  who-to-greet:
+    description: 'Who to greet in the logs'
+    required: true
+    default: 'World'
+outputs:
+  joke:
+    description: 'The random joke that was fetched'
+runs:
+  using: 'node12'
+  main: 'index.js' 
