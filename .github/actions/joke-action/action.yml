@@ -1,13 +1,7 @@
-name: 'Joke Action'
-description: 'A simple action that fetches a random joke'
-inputs:
-  who-to-greet:
-    description: 'Who to greet in the logs'
-    required: true
-    default: 'World'
-outputs:
-  joke:
-    description: 'The random joke that was fetched'
+name: "my joke action"
+
+description: "use an external API to retrieve and display a joke"
+
 runs:
-  using: 'node12'
-  main: 'index.js' 
+  using: "node16"
+  main: "main.js"
